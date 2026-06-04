@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donkada Eswar Sai</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#0b0b0b;color:#fff}
+nav{position:fixed;top:0;width:100%;background:rgba(0,0,0,.9);padding:15px;z-index:1000}
+.menu{float:right;font-size:28px;cursor:pointer;color:#00ffd5}
+.dropdown{display:none;position:absolute;right:15px;top:55px;background:#141414;border:1px solid #00ffd5;border-radius:10px}
+.dropdown a{display:block;padding:12px 18px;color:white;text-decoration:none}
+.dropdown a:hover{background:#00ffd5;color:black}
+.show{display:block}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(135deg,#000,#111,#1c1c1c)}
+.photo{width:180px;height:180px;border:3px dashed #00ffd5;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#00ffd5;margin-bottom:20px}
+section{padding:80px 10%}
+h2{color:#00ffd5;margin-bottom:20px}
+.card{background:#141414;padding:25px;border-radius:14px;margin:15px 0;box-shadow:0 0 10px rgba(0,255,213,.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #333;padding:10px;text-align:center}
+th{color:#00ffd5}
+.bookshelf{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.book{background:linear-gradient(135deg,#6b3f1d,#8b5a2b);padding:20px;border-radius:8px;cursor:pointer;text-align:center;font-weight:bold}
+.page{display:none;background:#f8f1dd;color:#111;padding:40px;border-radius:10px;margin-top:20px;font-family:Georgia,serif;line-height:1.8}
+img.marksheet{max-width:100%;border-radius:10px}
+footer{text-align:center;padding:30px;background:#050505;color:#aaa}
+</style>
+<script>
+function toggleMenu(){document.getElementById('menu').classList.toggle('show');}
+function openPoem(id){
+document.querySelectorAll('.page').forEach(x=>x.style.display='none');
+document.getElementById(id).style.display='block';
+}
+</script>
+</head>
+<body>
+
+<nav>
+<div class="menu" onclick="toggleMenu()">☰</div>
+<div id="menu" class="dropdown">
+<a href="#about">About</a>
+<a href="#academics">Academics</a>
+<a href="#creative">Creative Works</a>
+<a href="#achievements">Achievements</a>
+<a href="#projects">Projects</a>
+<a href="#digital">Digital Presence</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="photo">Add Photo</div>
+<h1>Donkada Eswar Sai</h1>
+<h3 style="color:#00ffd5">Student • Writer • Explorer</h3>
+<p>Learning, Creating, Growing</p>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+I am a Grade 12 student from Bangalore with an interest in academics, creative writing, technology, and content creation. I enjoy exploring new ideas, expressing them through writing, and continuously developing my skills through learning and experimentation.
+</div>
+</section>
+
+<section id="academics">
+<h2>Academics</h2>
+<div class="card">
+<h3>CBSE Class X (2025)</h3>
+<p><b>97.2% (Best of Five)</b></p>
+<table>
+<tr><th>Subject</th><th>Marks</th><th>Grade</th></tr>
+<tr><td>English</td><td>96</td><td>A1</td></tr>
+<tr><td>Hindi</td><td>96</td><td>A1</td></tr>
+<tr><td>Mathematics</td><td>96</td><td>A1</td></tr>
+<tr><td>Science</td><td>99</td><td>A1</td></tr>
+<tr><td>Social Science</td><td>95</td><td>A1</td></tr>
+<tr><td>Information Technology</td><td>99</td><td>A1</td></tr>
+</table>
+<p style="margin-top:15px">Upload your marksheet image as <b>marksheet.jpg</b> in the repository.</p>
+<img class="marksheet" src="marksheet.jpg" alt="Marksheet">
+</div>
+</section>
+
+<section id="creative">
+<h2>Creative Works</h2>
+<div class="bookshelf">
+<div class="book" onclick="openPoem('p1')">Build Bridges - Not Fences!</div>
+<div class="book" onclick="openPoem('p2')">Mistakes Do Happen</div>
+<div class="book" onclick="openPoem('p3')">Change</div>
+</div>
+
+<div id="p1" class="page"><h2>Build Bridges - Not Fences!</h2><p>In the world of Lust and Greed,<br>Fences grow like weeds,<br>What once was peaceful land,<br>Now transforms into a Battlefield.<br>Build bridges – Not Fences!<br><br>In this world of Lust and Greed,<br>Division is not what we need,<br>Unity is what we plead,<br>Build Bridges – Not Fences!<br><br>In this destructive World,<br>Will a White flag hoist high?<br>Will a happy truce be made?<br>Will borders erase, and the planet unify?<br><br>In this world of lust and greed,<br>Fences grow like weeds,<br>Build Bridges – Not Fences!<br>This is the way to succeed!</p></div>
+
+<div id="p2" class="page"><h2>Mistakes Do Happen</h2><p>mistakes do happen<br><br>a push or a fall,<br>may help us enlighten<br>although seems very small,<br><br>an apple's way down,<br>curious, Newton found,<br>where others just passed,<br>he saw a force, pulling fast<br><br>long ago in the past,<br>when the world was deemed flat,<br>this was called defective,<br>by a man with another perspective,<br>christened Aristotle,<br>the man was very thoughtful,<br><br>throughout humanity,<br>mistakes do happen<br>a push or a fall,<br>may help us enlighten<br>although seems very small.</p></div>
+
+<div id="p3" class="page"><h2>Change</h2><p>From the fire to the wheel,<br>All the way to steel,<br>From raw food and meat,<br>to a plateful of meal,<br>All of this is,<br>Change, I feel.<br><br>From algae to a tree,<br>From a drop to the sea,<br>From leaves to the tea,<br>Beans to coffee,<br>Wherever I see,<br>Change is what I perceive,<br><br>From the universe to a bee,<br>Wherever you see,<br>Change is what you feel,<br>You can't disagree,<br>This is my guarantee!</p></div>
+</section>
+
+<section id="achievements">
+<h2>Achievements</h2>
+<div class="grid">
+<div class="card"><h3>Curricular</h3><p>Add achievements here later.</p></div>
+<div class="card"><h3>Non-Curricular</h3><p>Poetry writing and future activities.</p></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="card">Projects will be added here.</div>
+</section>
+
+<section id="digital">
+<h2>Digital Presence</h2>
+<div class="card">
+<p>YouTube: @EswarSaiFacts</p>
+<p>X/Twitter: @EswarSaiDonkada</p>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="card">Creative Writing • Communication • Content Creation • Critical Thinking • Continuous Learning</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">Reach me through my digital platforms.</div>
+</section>
+
+<footer>© 2026 Donkada Eswar Sai</footer>
+</body>
+</html>
